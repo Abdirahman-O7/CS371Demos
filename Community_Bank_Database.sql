@@ -9,6 +9,8 @@ DROP TABLE IF EXISTS Departments;
 DROP TABLE IF EXISTS Branches;
 DROP TABLE IF EXISTS States;
 DROP TABLE IF EXISTS  Account_Types;
+DROP TABLE IF EXISTS emp_tmp;
+
 
 
 
