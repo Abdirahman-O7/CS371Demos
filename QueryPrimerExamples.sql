@@ -12,13 +12,13 @@ FROM Employees;
 -- --------------------------------------------------------------------------------------------------------------------------
 
 SELECT *
-FROM Departments
+FROM Departments;
 
 SELECT Department_ID, DeptName -- Displays same result set as above
-FROM Departments
+FROM Departments;
 
 SELECT DeptName
-FROM Departments
+FROM Departments;
 
 SELECT Employee_ID,'ACTIVE', -- Uses built-in functions
 Employee_ID*3.14159,UPPER(EmpLast_Name)
@@ -92,7 +92,7 @@ HAVING Count(Employee_ID)>2; -- Optional for filtering purposes
 SELECT Count(Employee_ID) Num_Employees,YEAR(EmpStart_Date) Work_Year
 FROM Employees
 GROUP BY Work_Year
-HAVING Work_Year<2004
+HAVING Work_Year<2004;
 
 -- --------------------------------------------------------------------------------------------------------------------------
 -- Slide 21 (ORDER BY Clause)
@@ -100,11 +100,11 @@ HAVING Work_Year<2004
 
 SELECT EmpFirst_Name,EmpLast_Name
 FROM Employees
-ORDER BY EmpLast_Name, EmpFirst_Name -- Alphabetized based on last name, then first name
+ORDER BY EmpLast_Name, EmpFirst_Name; -- Alphabetized based on last name, then first name
 
 SELECT EmpFirst_Name,EmpLast_Name
 FROM Employees
-ORDER BY EmpLast_Name DESC, EmpFirst_Name -- Reverse-alphabetized based on last name, then first name (alphabetized)
+ORDER BY EmpLast_Name DESC, EmpFirst_Name; -- Reverse-alphabetized based on last name, then first name (alphabetized)
 
 -- --------------------------------------------------------------------------------------------------------------------------
 -- Slides 22 & 23 (Problem/Solution)
@@ -128,7 +128,7 @@ FROM Employees;
 SELECT Employee_ID,Start_Year
 FROM Employees_View;
 
-DROP VIEW Employees_View -- Deletes view
+DROP VIEW Employees_View; -- Deletes view
 
 -- --------------------------------------------------------------------------------------------------------------------------
 -- Slide 25 (Subqueries)
