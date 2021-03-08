@@ -47,7 +47,7 @@ SELECT *
 FROM Customers;
 
 DELETE FROM Customers 
-WHERE Customer_ID='11';
+WHERE Customer_ID='8';
 
 SELECT *
 FROM Customers;
@@ -61,9 +61,20 @@ INNER JOIN Branches B
 ON A.Branch_ID=B.Branch_ID
 WHERE B.State_ID='NH';
 
+SELECT *
+FROM Accounts
+INNER JOIN Branches
+ON Accounts.Branch_ID=Branches.Branch_ID;
+
 DELETE FROM Accounts -- Same result as above
 WHERE Accounts.Branch_ID IN (
  SELECT Branch_ID FROM Branches
  WHERE State_ID='NH'
 );
+
+SELECT *
+FROM Accounts;
+
+SELECT *
+FROM Branches;
 
