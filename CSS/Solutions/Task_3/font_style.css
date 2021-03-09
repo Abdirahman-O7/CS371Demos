@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: seaside;
+    src: url(fonts/Seaside.ttf);
+        }
+
+h1, h2 {
+    font-family:seaside;
+}
+p{
+    font-family: 'Open Sans',sans-serif;
+    font-size:13px;
+}
