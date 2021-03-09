@@ -1,0 +1,92 @@
+
+<html>
+    <head>
+        <title>Forms</title>
+
+    </head>
+    <body>
+        <form>
+            <label for="name">Name:</label> <input id="name" type="text" name="name"><br><br>
+
+            <label for="password">Password:</label> <input id="password" type="password" name="password" minlength="8" required><br><br>
+
+            <label for="phone">Enter a phone number (format: ###-###-####):</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+
+            <label for="department">Department:</label>
+            <select id="department">
+                <option value="CS">Computer Science</option>
+                <option value="NW">Networking</option>
+                <option value="CH">Chemistry</option>
+                <option value="BIO">Biology</option>
+            </select> <br><br>
+
+            <select size ="4">
+                <option value="eng">Engineer</option>
+                <option value="doc">Doctor</option>
+                <option value="pha">Pharmacist</option>
+                <option value="fish">Fisherman</option>
+            </select><br><br>
+
+            <label for="color">Select your favorite color:</label>
+            <input type="color" name="color" id="color"><br><br>
+
+            <label for="range">Select your favorite range:</label>
+            <input type="range" name="range" id="range"><br><br>
+
+            <label>Type your best roast: </label>
+            <textarea name="text" id="text" rows="4" cols="50" maxlength="20">
+                /roast
+            </textarea><br><br>
+
+            <label for="week">Select your favorite week:</label>
+            <input type="week" id="week" name="week"><br><br>
+
+            <label for="youtube">Drop your YouTube Channel:</label>
+            <input type="url" id="youtube" name="youtube"><br><br>
+
+            <label>Select your favorite time of day: </label>
+            <input type="time" id="appt" name="appt"><br><br>
+
+            <label>Class Preference: </label>
+            <input type="radio" name="class" value="f2f" id="f2f"><label for="f2f">Face-to-Face</label>
+            <input type="radio" name="class" value="online" id="online"><label for="online">Online</label> <br><br>
+
+            <label>How do you want to be contacted?</label> <br>
+            <input type="checkbox" name="contact[]" value="email" id="contact_email"><label for="contact_email">E-mail</label><br>
+            <input type="checkbox" name="contact[]" value="phone" id="contact_phone"><label for="contact_phone">Phone</label> <br>
+
+            <label for="meme">Attach your best meme: </label>
+            <input type="file" name="file" id="meme"> <br><br>
+
+            <label for="memes">Attach your worst three memes: </label>
+            <input type="file" name="file2" id="memes" multiple> <br><br>
+
+            <input type="submit" value="Submit">
+
+            <input type="reset" value="Reset">
+
+            <input type="button" value="Nothing">
+
+            <input type="hidden" value="I'm wearing an invisibility cloak">
+
+        </form>
+
+        <p>---------------------------------------------------------------------------------------------</p>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label> Name:</label> <input type="text"><br>
+            <label> Date Of Birth:</label> <input type="date"><br>
+            <label> Phone Number:</label> <input type="text"><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Log in information:</legend>
+            <label>  E-mail:</label> <input type="text"><br>
+            <label>Password:</label> <input type="password"><br>
+            <input type="submit" value="Submit"> <input type="reset" value="reset">
+        </fieldset>
+
+    </body>
+</html>

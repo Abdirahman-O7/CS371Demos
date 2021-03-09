@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>HTML Forms</title>
+
+    </head>
+    <body>
+        <form>
+            <table>
+
+                <tr>
+                    <td><label for="username">Username:</label> </td> <td> <input required id="username" type="text" name="username"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="password">Password:</label> </td> <td> <input required id="password" type="password" name="password"> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="position"> Position:</label>
+                    </td>
+                    <td>
+                        <select id="position">
+                            <option value="engineer">Engineer</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="mechanic">Car Mechanic</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Shift Preference:
+                    </td>
+                    <td>
+                        <input required type="radio" name="shift" value="morning" id="mornin"><label for="morning">Morning</label>
+                        <input required type="radio" name="shift" value="evening" id="evening"><label for="evening">Evening</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="130px">
+                        Contact preference:
+                    </td>
+                    <td>
+                        <input type="checkbox" name="contact[]" value="email" id="email"><label for="email">E-mail</label><br>
+                        <input type="checkbox" name="contact[]" value="phone" id="phone"><label for="phone">Phone</label> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="file">Picture:</label> </td> <td> <input id="file" type="file"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="date">Date of Birth:</label> </td> <td> <input id="date" type="date"> </td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" value="Submit"> </td><td></td>
+                </tr>
+
+            </table>
+        </form>
+    </body>
+</html>
