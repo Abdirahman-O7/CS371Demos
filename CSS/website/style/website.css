@@ -1,0 +1,303 @@
+
+
+header{
+    position:fixed;
+    top:0px;
+    left:0px;
+    color:darkblue;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    width:100%;
+    height:120px;
+    z-index:5;
+}
+
+.logo{
+    padding-top:10px;
+    position:relative;
+    text-align: center;
+}
+
+
+
+header img {
+    height:28px;
+    width:50px;
+    display:inline-block;
+}
+
+header h1{
+    display:block;
+    text-transform: uppercase;
+    font-size:11px;
+    line-height:28px;
+}
+
+header .searchbar{
+    position:relative;
+    text-align: center;
+}
+
+header input{
+    color:lightgray;
+    border-radius:5px;
+    height:20px;
+    border: 1px solid lightgray;
+    width:70%;
+}
+
+nav{
+    position:fixed;
+    left:0px;
+    top:120px;
+    width:100%;
+    background-color:white;
+    border-bottom:1px solid lightgray;
+    z-index:10;
+    font-size:12px;
+}
+
+nav ul{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    position:relative;
+    text-align: center;
+}
+
+nav  li{
+    display:inline;
+    padding:2px;
+    border-right:1px solid lightgray;
+    text-decoration: none;
+}
+
+nav li:last-child{
+    border-right-width: 0px;
+}
+
+nav li a{
+    text-decoration: none;
+    color:black;
+}
+
+nav li:hover{
+    text-decoration:underline;
+    background-color:rgb(245,245,245);
+}
+
+div.body{
+    position:absolute;
+    top:140px;
+    left:0px;
+    width:100%;
+}
+
+div.contents{
+    position:relative;
+    text-align: center;
+}
+
+div.photo{
+    position:relative;
+    display:inline-block;
+    width:95%;
+    height:200px;
+    border:1px solid lightgray;
+    background: url('../images/students.jpg') no-repeat center bottom;
+    background-size:contain;
+}
+
+
+div.photo .description{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    height:20px;
+    text-align: center;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    z-index:2;
+    width:100%;
+}
+
+section.news{
+    margin:10px;
+    border-top:1px solid lightgray;
+    background-color:rgb(245,245,245);
+    text-align: left;
+    padding:5px;
+    max-height:300px;
+    overflow:auto;
+}
+
+section.news h2{
+    font-size:15px;
+}
+
+section.news ul{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    position:relative; 
+}
+
+section.news li{
+  padding:5px;
+  border-bottom:1px solid lightgray;
+  font-size:13px; 
+}
+
+section.news li:last-child{
+  border-bottom-width:0px;
+}
+
+section.news li a{
+    text-decoration:none;
+    color: black;
+}
+
+section.news li a:hover{
+    color:blue;
+}
+
+footer{
+    text-align: center;
+    padding:5px;
+    font-size:12px;
+}
+
+@media all and (min-width: 480px) {
+  header {
+      height:143px;
+  }
+  
+.logo{
+    padding-left:10px;
+    text-align: left;
+}
+
+header img {
+    display:block;
+    margin-left:5%;
+    height:65px;
+    width:144px;
+}
+
+header h1{
+    display:block;
+    margin-left:5%;
+    font-size:15px;
+    line-height:28px;
+}
+
+header .searchbar{
+    position:absolute;
+    top:20px;
+    right:5px;
+}
+
+header input{
+    position:absolute;
+    top:0px;
+    right:0px;
+    color:lightgray;
+    border-radius:5px;
+    height:20px;
+    border: 1px solid lightgray;
+    width:150px;
+}
+
+nav{
+    font-size:16px;
+    top:120px;
+    margin-left:5%;
+    height:23px;
+}
+
+nav ul{
+    text-align: left;
+}
+
+nav li{
+    padding:5px;
+}
+
+nav li a{
+    padding:10px;
+}
+
+div.contents{
+    width:90%;
+    padding:0% 5% 5% 5%;
+    text-align: left;
+}
+
+div.photo{
+    position:relative;
+    display:block;
+    float:left;
+    width:60%;
+    margin-left:0%;
+    margin-right:2%;
+    height:448px;
+    max-width:873px;
+    min-width:450px;
+    border:1px solid lightgray;
+    background-size:auto;
+    background-position: top;
+}
+
+div.photo .description{
+    font-size:20px;
+    height:30px;
+    line-height:30px;
+}
+
+section.news{
+    position:relative;
+    display:block;
+    float:left;
+    width:calc(38% - 12px);
+    height:448px;
+    max-height:448px;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:0%;
+    min-width:300px;
+    border-top:1px solid lightgray;
+    background-color:rgb(245,245,245);
+    text-align: left;
+    padding:5px;
+}
+
+section.news h2{
+    font-size:20px;
+    padding:10px;
+    padding-bottom:0px;
+}
+
+section.news li{
+  padding:10px;
+  border-bottom:1px solid lightgray;
+  font-size:15px; 
+}
+
+div.body{
+    
+    top:160px;
+
+}
+
+footer{
+    display:inline-block;
+    width:90%;
+}
+
+header .searchbar{
+    margin-right:5%;
+}
+
+
+
+}

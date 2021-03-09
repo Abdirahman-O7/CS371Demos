@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile First</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            .container {
+                background: #eaeaed;
+            }
+            .container,
+            section,
+            aside {
+                border-radius: 6px;
+            }
+            section,
+            aside {
+                background: #2db34a;
+                color: #fff;
+                margin: 1.858736059%;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            @media all and (min-width: 420px) {
+                .container {
+                    max-width: 538px;
+                }
+                section {
+                    float: left;
+                    width: 63.197026%;
+                }
+                aside {
+                    float: right;
+                    width: 29.3680297%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <section>Section</section>
+            <aside>Aside</aside>
+        </div>
+    </body>
+</html>
