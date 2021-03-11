@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <title>Form 2 </title>
+    </head>
+    <body>
+        <form method="post" action="handle_form_2.php">
+
+            Name: <input type="text" name="name"><br>
+            E-mail: <input type="text" name="email"><br>
+            Department:
+            <select name="dept">
+                <option value="">Select department</option>
+                <option value="computer_science">Computer Science</option>
+                <option value="networking">Networking</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="biology">Biology</option>
+            </select> <br>
+
+            Gender:
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="other">Other <br>
+            Contact: <br>
+            <input type="checkbox" name="contact[]" value="email">E-mail<br>
+            <input type="checkbox" name="contact[]" value="phone">Phone <br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>
