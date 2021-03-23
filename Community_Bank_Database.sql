@@ -91,6 +91,8 @@ create table IF NOT EXISTS Accounts
   Branch_ID smallint unsigned,
   Employee_ID smallint unsigned,
   Account_Type_ID varchar(3),
+  AvailableBalance integer unsigned,
+  LastActivityDate date,
   constraint fk_accounts_customers foreign key (Customer_ID)
     references Customers (Customer_ID) ON DELETE RESTRICT,
   constraint fk_accounts_branches foreign key (Branch_ID)
@@ -259,16 +261,16 @@ values ('47 Mockingbird Ln', 'Lynnfield', 'MA', '01940', 'James', 'Hadley', '197
 
 
 /* account data */
-insert into Accounts (Customer_ID,AcctOpen_Date,AcctStatus,Branch_ID,Employee_ID,Account_Type_ID)
-VALUES ('1','2015-12-05','ACTIVE',1,1,'CHK'),
-('1','2015-12-05','ACTIVE',2,2,'SAV'),
-('3','2016-03-04','ACTIVE',3,1,'CHK'),
-('4','2010-11-18','ACTIVE',4,2,'SAV'),
-('5','2005-03-12','ACTIVE',3,3,'CD'),
-('6','2002-10-08','ACTIVE',2,1,'CHK'),
-('7','2013-08-12','ACTIVE',2,4,'CHK'),
-('8','2015-07-12','ACTIVE',2,1,'CHK'),
-('8','2006-05-02','ACTIVE',1,5,'AUT');
+insert into Accounts (Customer_ID,AcctOpen_Date,AcctStatus,Branch_ID,Employee_ID,Account_Type_ID, AvailableBalance, LastActivityDate)
+VALUES ('1','2015-12-05','ACTIVE',1,1,'CHK', 100, '2021-1-05'),
+('1','2015-12-05','ACTIVE',2,2,'SAV', 200, '2011-3-01'),
+('3','2016-03-04','ACTIVE',3,1,'CHK', 100, '2014-1-02'),
+('4','2010-11-18','ACTIVE',4,2,'SAV', 50, '2015-2-12'),
+('5','2005-03-12','ACTIVE',3,3,'CD', 1092, '2017-4-15'),
+('6','2002-10-08','ACTIVE',2,1,'CHK', 23123, '2016-1-20'),
+('7','2013-08-12','ACTIVE',2,4,'CHK', 100, '2011-3-01'),
+('8','2015-07-12','ACTIVE',2,1,'CHK', 231, '2021-1-05'),
+('8','2006-05-02','ACTIVE',1,5,'AUT',983, '2016-1-20');
 
 
 /* transaction data */
