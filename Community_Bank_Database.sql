@@ -1,4 +1,4 @@
-CREATE DATABASE CS371Spring2021;
+-- CREATE DATABASE CS371Spring2021;
 USE CS371Spring2021;
 
 DROP TABLE IF EXISTS Transactions;
@@ -10,8 +10,6 @@ DROP TABLE IF EXISTS Branches;
 DROP TABLE IF EXISTS States;
 DROP TABLE IF EXISTS  Account_Types;
 DROP TABLE IF EXISTS emp_tmp;
-
-
 
 
 /* begin table creation */
@@ -128,7 +126,7 @@ values ('MA','Massachusetts'),('MO','Missouri'),('NH','New Hampshire');
 
 /* department data */
 insert into Departments (DeptName)
-values ('Operations'),('Loans'),('Administration');
+values ('Operations'),('Loans'),('Administration'), ('Customer Service');
 
 /* branch data */
 insert into Branches (BranchName, BranchStreet, BranchCity, State_ID, BranchZip_Code)
@@ -140,25 +138,25 @@ values ('Headquarters', '3882 Main St.', 'Waltham', 'MA', '02451'),
 /* employee data */
 insert into Employees (EmpFirst_Name, EmpLast_Name, EmpStart_Date, 
   Department_ID, Branch_ID)
-values ('Michael', 'Smith', '2001-06-22', 
+values ('Michael', 'Smith', '2020-06-22', 
   (select Department_ID from Departments where DeptName = 'Administration'),  
   (select Branch_ID from Branches where BranchName = 'Headquarters')),
 ('Susan', 'Barker', '2002-09-12', 
   (select Department_ID from Departments where DeptName= 'Administration'), 
   (select Branch_ID from Branches where BranchName = 'Headquarters')),
-('Robert', 'Tyler', '2000-02-09',
+('Robert', 'Tyler', '2015-02-09',
   (select Department_ID from Departments where DeptName= 'Administration'), 
   (select Branch_ID from Branches where BranchName = 'Headquarters')),
 ('Susan', 'Hawthorne', '2002-04-24', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'Headquarters')),
-('John', 'Gooding', '2003-11-14', 
+('John', 'Gooding', '2020-11-14', 
   (select Department_ID from Departments where DeptName = 'Loans'), 
   (select Branch_ID from Branches where BranchName = 'Headquarters')),
 ('Helen', 'Fleming', '2004-03-17', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'Headquarters')),
-('Chris', 'Tucker', '2004-09-15', 
+('Chris', 'Tucker', '2017-09-15', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'Headquarters')),
 ('Sarah', 'Parker', '2002-12-02', 
@@ -170,7 +168,7 @@ values ('Michael', 'Smith', '2001-06-22',
 ('Paula', 'Roberts', '2002-07-27', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'Woburn Branch')),
-('Thomas', 'Ziegler', '2000-10-23', 
+('Thomas', 'Ziegler', '2020-10-23', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'Woburn Branch')),
 ('Samantha', 'Jameson', '2003-01-08', 
@@ -179,7 +177,7 @@ values ('Michael', 'Smith', '2001-06-22',
 ('John', 'Blake', '2000-05-11', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'Quincy Branch')),
-('Cindy', 'Mason', '2002-08-09', 
+('Cindy', 'Mason', '2013-08-09', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'Quincy Branch')),
 ('Frank', 'Portman', '2003-04-01', 
@@ -188,7 +186,7 @@ values ('Michael', 'Smith', '2001-06-22',
 ('Theresa', 'Markham', '2001-03-15', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'So. NH Branch')),
-('Beth', 'Fowler', '2002-06-29', 
+('Beth', 'Fowler', '2010-06-29', 
   (select Department_ID from Departments where DeptName = 'Operations'), 
   (select Branch_ID from Branches where BranchName = 'So. NH Branch')),
 ('Rick', 'Tulman', '2002-12-12', 
