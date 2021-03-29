@@ -50,6 +50,9 @@ UPDATE Accounts
 SET LastActivityDate=CURRENT_DATE()
 WHERE Account_ID=1;
 
+SELECT *
+FROM Accounts;
+
 ROLLBACK TO SAVEPOINT before_adding_transaction;
 COMMIT;
 

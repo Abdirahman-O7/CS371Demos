@@ -62,8 +62,9 @@ CASE
 WHEN EXISTS (SELECT 1  FROM Accounts A WHERE A.Customer_ID=C.Customer_ID AND A.Account_Type_ID='CHK') THEN 'Y'
 ELSE 'N'
 END has_checking,
+
 CASE 
-WHEN EXISTS (SELECT 1   FROM Accounts A WHERE A.Customer_ID=C.Customer_ID AND A.Account_Type_ID='SAV') THEN 'Y'
+WHEN EXISTS (SELECT 1  FROM Accounts A WHERE A.Customer_ID=C.Customer_ID AND A.Account_Type_ID='SAV') THEN 'Y'
 ELSE 'N'
 END has_saving
 FROM Customers C;
