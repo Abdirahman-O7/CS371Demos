@@ -18,6 +18,7 @@
         <a href="transactionInformation.php">Transactions</a>
         <a href="new_employee.php">New Employee</a>
         <a href="new_customer.php">New Customer</a>
+        <a href="logout.php">Logout</a>
         
     </div>
 
