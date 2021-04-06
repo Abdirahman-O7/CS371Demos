@@ -8,8 +8,9 @@ DROP TABLE IF EXISTS Employees;
 DROP TABLE IF EXISTS Departments;
 DROP TABLE IF EXISTS Branches;
 DROP TABLE IF EXISTS States;
-DROP TABLE IF EXISTS  Account_Types;
+DROP TABLE IF EXISTS Account_Types;
 DROP TABLE IF EXISTS emp_tmp;
+DROP TABLE IF EXISTS Logins;
 
 
 /* begin table creation */
@@ -117,6 +118,13 @@ create table IF NOT EXISTS Transactions
     references Employees (Employee_ID) ON DELETE RESTRICT,
   constraint pk_transactions primary key (Transaction_ID)
  );
+ 
+ create table IF NOT EXISTS Logins
+ (LoginID INT(5) AUTO_INCREMENT,
+ login varchar(255) NOT NULL,
+ password varchar(255) NOT NULL,
+ PRIMARY KEY (loginID)
+ )ENGINE = INNODB;
 
 /* end table creation */
 
@@ -283,6 +291,9 @@ VALUES ('CDT',1,50.02,null),
 ('DBT','1',12.02,1)
 ;
 
-
+/*login data */ 
+insert into Logins (login, password) VALUES
+(('admin'), ('$2y$10$.zgGjHrsJUKOmwZm/iaade9myAVPPIeefz3XiYz/0Ga5Ythud/QC.')), -- Passwords: admin, customer
+(('customer'), ('$2y$10$R8TVrXKcsGnBImMC6UGah.NpWaBP2N69Q13NYSXBksSZ1ghB5S4N2')); -- Hash Generator: https://www.onlinewebtoolkit.com/hash-generator
 
 /* end data population */
