@@ -17,6 +17,8 @@ include 'show_transactions.php';
         <a href="customerInformation.php">Customers</a>
         <a href="accountsInformation.php">Accounts</a>
         <a href="transactionInformation.php">Transactions</a>
+        <a href="new_employee.php">New Employee</a>
+        <a href="new_customer.php">New Customer</a>
     </div>
 
 
