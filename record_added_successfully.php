@@ -1,11 +1,8 @@
-<?php
-include 'show_customers.php';
-?>
-
 <html>
     
 <head>
-    <title>Community Bank Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Community Bank Database </title>
     <link rel="stylesheet" type="text/css" href="homepage.css">
 </head>
 
@@ -18,13 +15,13 @@ include 'show_customers.php';
         <a href="accountsInformation">Accounts</a>
         <a href="transactionInformation.php">Transactions</a>
         <a href="new_employee.php">New Employee</a>
-        <a href="new_customer.php">New Customer</a>
+        
     </div>
 
 
     <div style="padding-left:16px">
-        <h2>Customer Information</h2>
-        <?php echo $html ?>
+        <h2>New Record Added Successfully!</h2>
+        <h4>See your new record by navigating to the respective page along the navigation.</h4>
     
     </div>
 
